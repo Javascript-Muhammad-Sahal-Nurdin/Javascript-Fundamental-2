@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 let hasDriversLicense = false;
 const passTest = true;
 
@@ -11,8 +11,8 @@ if (hasDriversLicense) console.log('I can drive ');
 
 
 // Functions
-/* Funstions is piece a code yang dapat digunakan berkali-kali. 
-*/
+ Funstions is piece a code yang dapat digunakan berkali-kali. 
+
 function logger() {
     console.log('My name is Jonas');
     
@@ -35,3 +35,32 @@ const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
 
 const num = Number('23');
+*/
+
+// Functions Declarations vs Expressions
+
+// Function Declarations
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+const age1 = calcAge1(2003);
+console.log(age1);
+
+// Function expressions
+// anonymus function as expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear; // Functions with Expressions
+    }
+const age2 = calcAge2(1991);
+console.log(age1, age2);
+
+// The different
+// kita bisa panggil function delarations sebelum di definisikan
+const age1 = calcAge1(2003);
+
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+// Namun tidak bisa dengan Functions Expression. Jadi untuk penggunaannya kita lebih ke fuction expressions. sama saja lebih ke preferensi masing-masing
+
+
