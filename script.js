@@ -21,3 +21,17 @@ function logger() {
 logger(); // invoke or calling or running the functions
 logger();
 logger();
+
+function fruitProcessor(apples, oranges) { // disamping namanya parameter
+    console.log(apples, oranges);
+    const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+    return juice; // return any value
+}
+
+const appleJuice = fruitProcessor(5, 0); // Di samping namanya arguments
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+const num = Number('23');
