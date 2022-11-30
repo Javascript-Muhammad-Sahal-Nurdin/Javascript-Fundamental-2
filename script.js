@@ -85,13 +85,13 @@ console.log(age3);
 // console.log(yearUntilRetirement(2003));
 
 // Arrow function sama dengan 2 atau lebih
-const yearUntilRetirement = (birthYear, firstName) => {
-    const age = 2037 - birthYear;
-    const retirement = 65 - age;
-    return `${firstName} retires in ${retirement} years`;
-}
+// const yearUntilRetirement = (birthYear, firstName) => {
+//     const age = 2037 - birthYear;
+//     const retirement = 65 - age;
+//     return `${firstName} retires in ${retirement} years`;
+// }
     
-console.log(yearUntilRetirement(2003, 'Sahal'));
+// console.log(yearUntilRetirement(2003, 'Sahal'));
 
 // Kekurangan menggunakan arrow function ini adalah tidak bisa menggunakan 'this' keyword
 
@@ -124,3 +124,26 @@ const fruitProcessor = (apples, oranges) => {
 }
 
 console.log(fruitProcessor(4, 3));
+
+// Reviewing Functions
+
+const calcAge = function age(birthYear) {
+    return 2037 - birthYear;
+}
+
+const yearUntilRetirement = function (birthYear, firstName) {
+    const age = calcAge(birthYear) ;
+    const retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`);
+        return retirement;
+    } else {
+         console.log(`${firstName} has already retired 🎉`);
+        return -1; // Ini adalah simbol default kesalahan yang sering digunakan dalam programming
+    }
+   
+}
+    
+console.log(yearUntilRetirement(2003, 'Sahal'));
+console.log(yearUntilRetirement(1950, 'Jonas'));
