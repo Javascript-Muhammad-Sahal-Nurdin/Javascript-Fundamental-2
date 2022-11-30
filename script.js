@@ -97,12 +97,25 @@ console.log(yearUntilRetirement(2003, 'Sahal'));
 
 
 // Functions calling other functions
-function cutFruitPieces(fruit) {
-    return fruit * 4;
-}
+// function cutFruitPieces(fruit) {
+//     return fruit * 4;
+// }
 
 
-function fruitProcessor(apples, oranges) { 
+// function fruitProcessor(apples, oranges) { 
+//     const applePieces = cutFruitPieces(apples);
+//     const orangePieces = cutFruitPieces(oranges);
+
+//     const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges`;
+//     return juice; 
+// }
+
+// console.log(fruitProcessor(2, 3));
+
+
+// Dengen menggunakan arrow function maka code di atas akan menjadi
+const cutFruitPieces = fruit => fruit * 4;
+const fruitProcessor = (apples, oranges) => { 
     const applePieces = cutFruitPieces(apples);
     const orangePieces = cutFruitPieces(oranges);
 
@@ -110,7 +123,4 @@ function fruitProcessor(apples, oranges) {
     return juice; 
 }
 
-console.log(fruitProcessor(2, 3));
-
-
-//
+console.log(fruitProcessor(4, 3));
