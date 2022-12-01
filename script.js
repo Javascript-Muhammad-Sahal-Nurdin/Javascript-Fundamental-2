@@ -151,23 +151,23 @@ const yearUntilRetirement = function (birthYear, firstName) {
 
 // Coding Challenge #1
 
-const calcAverage = (score1, score2, score3) => {
-    const averageScoreKoalas = (score1 + score2 + score3) / 3;
-    const averageScoreDolphins = (score1 + score2 + score3) / 3;
-    return averageScoreKoalas,averageScoreDolphins;
-}
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
-function checkWinner(avgDolphins, avgKoalas) {
-    avgDolphins = calcAverage(averageScoreDolphins);
-    avgKoalas = calcAverage(averageScoreKoalas);
+// Test 1
+const scoreDolphins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+function checkWinner(avgKoalas, avgDolphins) {
 
     if (avgDolphins >= 2 * avgKoalas) {
         console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
         return checkWinner;
-    } else {
-        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+    } else if  (avgKoalas >= 2 * avgDolphins){
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
         return checkWinner;
+    } else {
+        console.log('both team are draw');
     }
 }
-
-console.log(calcAverage(44, 23, 71), checkWinner);
+checkWinner(scoreDolphins, scoreKoalas);
