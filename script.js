@@ -74,7 +74,7 @@ const calcAge2 = function (birthYear) {
 // With arrow function (satu parameter dengan 1 logic)
 const calcAge3 = birthYear => 2037 - birthYear;
 const age3 = calcAge3(2003);
-console.log(age3);
+// console.log(age3);
 
 // Arrow function satu parameter namun banyak logics
 // const yearUntilRetirement = birthYear => {
@@ -123,7 +123,7 @@ const fruitProcessor = (apples, oranges) => {
     return juice; 
 }
 
-console.log(fruitProcessor(4, 3));
+// console.log(fruitProcessor(4, 3));
 
 // Reviewing Functions
 
@@ -145,5 +145,29 @@ const yearUntilRetirement = function (birthYear, firstName) {
    
 }
     
-console.log(yearUntilRetirement(2003, 'Sahal'));
-console.log(yearUntilRetirement(1950, 'Jonas'));
+// console.log(yearUntilRetirement(2003, 'Sahal'));
+// console.log(yearUntilRetirement(1950, 'Jonas'));
+
+
+// Coding Challenge #1
+
+const calcAverage = (score1, score2, score3) => {
+    const averageScoreKoalas = (score1 + score2 + score3) / 3;
+    const averageScoreDolphins = (score1 + score2 + score3) / 3;
+    return averageScoreKoalas,averageScoreDolphins;
+}
+
+function checkWinner(avgDolphins, avgKoalas) {
+    avgDolphins = calcAverage(averageScoreDolphins);
+    avgKoalas = calcAverage(averageScoreKoalas);
+
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+        return checkWinner;
+    } else {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+        return checkWinner;
+    }
+}
+
+console.log(calcAverage(44, 23, 71), checkWinner);
