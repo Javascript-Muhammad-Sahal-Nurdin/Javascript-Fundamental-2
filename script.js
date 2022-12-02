@@ -290,5 +290,8 @@ console.log(tips);
 const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]]
 console.log(total);
 
+// Introduction to Objects
 
+// Contoh array
+const 
 
