@@ -336,4 +336,23 @@ console.log(jonasObject['last' + nameKey]);
 
 const interestedIn = prompt('What do you want to know about Jonas? Choose between fristName, lastname, age, job, and friends')
 
-console.log(jonasObject[interestedIn]);
+//console.log(jonasObject[interestedIn]);
+
+// Kita juga bisa menggunakan dalam if else karena ini bentuknya trusly and falsy
+
+if (jonasObject[interestedIn]) {
+    console.log(jonasObject[interestedIn]);
+} else {
+    console.log('Wrong answer! Choose between firstName, lastName, age, job, and friends');
+}
+
+
+// Sekarang kita akan menambahkan elemen ke object
+jonasObject.location = 'Portugal';
+jonasObject['twitter'] = '@jonassschemtmann';
+console.log(jonasObject);
+
+
+// Challenge : kita harus menampilkan output berikut
+//  "Jonas" has 3 friends, and his best friend is called "Michael"
+console.log(`${jonasObject.firstname} has ${jonasObject.friends.length} friends, and his best friend is called ${jonasObject.friends[0]}`);
