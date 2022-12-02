@@ -301,6 +301,14 @@ const jonasArray = [
     ['Michael', 'Peter', 'Steven']
 ];
 
-// Dalam bentuk objecknya
+// Dalam bentuk objecknya (Key; Property (atau biasa disebut value) 
+// Urutan dalam object adalah penting sedangkan array tidak
+const jonasObjecr = {
+    firstName: 'Jonas',
+    lastname: 'Schemedtmann',
+    age: 2037 - 1991,
+    job: teacher,
+    friends: ['Michael', 'Peter', 'Steven']
+};
 
-
+// Dot vs Bracket Notation
