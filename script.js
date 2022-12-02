@@ -265,7 +265,7 @@ console.log(friends.includes(23));
 if (friends.includes('Peter')) {
     console.log('You have a friend called Steven');
 } 
-*/
+
 
 // Coding Challenge # 2
 // Tip Calculator
@@ -300,15 +300,36 @@ const jonasArray = [
     'teacher',
     ['Michael', 'Peter', 'Steven']
 ];
-
+*/
 // Dalam bentuk objecknya (Key; Property (atau biasa disebut value) 
-// Urutan dalam object adalah penting sedangkan array tidak
-const jonasObjecr = {
-    firstName: 'Jonas',
+// Urutan dalam object adalah TIDAK PENTING
+const jonasObject = {
+    firstname: 'Jonas',
     lastname: 'Schemedtmann',
     age: 2037 - 1991,
-    job: teacher,
+    job: 'teacher',
     friends: ['Michael', 'Peter', 'Steven']
 };
+console.log(jonasObject);
 
 // Dot vs Bracket Notation
+// Di sini akan mempelajari mengabil dan mengakses dari object
+// harus menggunakan bracket harus menggunakan real value
+
+// DOT
+console.log(jonasObject.lastname);
+
+// BRACKET
+console.log(jonasObject['lastname']);
+
+// Jika ingin melakukan operasi menggunakan bracket maka harus menggunakan real key dari object tersebut
+const nameKey = 'name';
+console.log(jonasObject['first' + nameKey]);
+console.log(jonasObject['last' + nameKey]);
+
+// JIKA MENGGUNAKAN DOT AKAN ERROR
+// console.log(jonasObject.'last' + nameKey); // error
+// JADI KITA TIDAK BISA MENGGUNAKAN DOT HARUS MENGGUNAKAN BRACKET 
+// KAPAN SAAT KITA MELAKUKAN DOT DAN BRACKET, KETIKA KITA INGIN MELAKUKAN SUATU OPERASI MAKA KITA HARUS MENGGUNAKAN BRACKET SEDANGKAN JIKA KITA HANYA INGIN MEMANGGIL NAMA DARI SUATU PROPERTY MAKA KITA BISA MENGGUNAKAN OBJECT
+
+
