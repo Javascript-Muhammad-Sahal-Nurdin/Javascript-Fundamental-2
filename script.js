@@ -293,5 +293,14 @@ console.log(total);
 // Introduction to Objects
 
 // Contoh array
-const 
+const jonasArray = [
+    'Jonas',
+    'Schemedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+// Dalam bentuk objecknya
+
 
