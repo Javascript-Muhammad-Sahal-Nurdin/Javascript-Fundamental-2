@@ -329,7 +329,11 @@ console.log(jonasObject['last' + nameKey]);
 
 // JIKA MENGGUNAKAN DOT AKAN ERROR
 // console.log(jonasObject.'last' + nameKey); // error
-// JADI KITA TIDAK BISA MENGGUNAKAN DOT HARUS MENGGUNAKAN BRACKET 
+// JADI KITA TIDAK BISA MENGGUNAKAN DOT HARUS MENGGUNAKAN BRACKET
 // KAPAN SAAT KITA MELAKUKAN DOT DAN BRACKET, KETIKA KITA INGIN MELAKUKAN SUATU OPERASI MAKA KITA HARUS MENGGUNAKAN BRACKET SEDANGKAN JIKA KITA HANYA INGIN MEMANGGIL NAMA DARI SUATU PROPERTY MAKA KITA BISA MENGGUNAKAN OBJECT
 
+// Sekarang kita akan mencari key dari jonasObject dengan menggunakan prompt
 
+const interestedIn = prompt('What do you want to know about Jonas? Choose between fristName, lastname, age, job, and friends')
+
+console.log(jonasObject[interestedIn]);
