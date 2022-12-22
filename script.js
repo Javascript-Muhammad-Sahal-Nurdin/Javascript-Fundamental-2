@@ -303,29 +303,29 @@ const jonasArray = [
 */
 // Dalam bentuk objecknya (Key; Property (atau biasa disebut value) 
 // Urutan dalam object adalah TIDAK PENTING
-const jonasObject = {
-    firstname: 'Jonas',
-    lastname: 'Schemedtmann',
-    age: 2037 - 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-};
-console.log(jonasObject);
+// const jonasObject = {
+//     firstname: 'Jonas',
+//     lastname: 'Schemedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// };
+// console.log(jonasObject);
 
 // Dot vs Bracket Notation
 // Di sini akan mempelajari mengabil dan mengakses dari object
 // harus menggunakan bracket harus menggunakan real value
 
 // DOT
-console.log(jonasObject.lastname);
+// console.log(jonasObject.lastname);
 
 // BRACKET
-console.log(jonasObject['lastname']);
+// console.log(jonasObject['lastname']);
 
 // Jika ingin melakukan operasi menggunakan bracket maka harus menggunakan real key dari object tersebut
-const nameKey = 'name';
-console.log(jonasObject['first' + nameKey]);
-console.log(jonasObject['last' + nameKey]);
+// const nameKey = 'name';
+// console.log(jonasObject['first' + nameKey]);
+// console.log(jonasObject['last' + nameKey]);
 
 // JIKA MENGGUNAKAN DOT AKAN ERROR
 // console.log(jonasObject.'last' + nameKey); // error
@@ -334,25 +334,87 @@ console.log(jonasObject['last' + nameKey]);
 
 // Sekarang kita akan mencari key dari jonasObject dengan menggunakan prompt
 
-const interestedIn = prompt('What do you want to know about Jonas? Choose between fristName, lastname, age, job, and friends')
+// const interestedIn = prompt('What do you want to know about Jonas? Choose between fristName, lastname, age, job, and friends')
 
 //console.log(jonasObject[interestedIn]);
 
 // Kita juga bisa menggunakan dalam if else karena ini bentuknya trusly and falsy
 
-if (jonasObject[interestedIn]) {
-    console.log(jonasObject[interestedIn]);
-} else {
-    console.log('Wrong answer! Choose between firstName, lastName, age, job, and friends');
-}
+// if (jonasObject[interestedIn]) {
+//     console.log(jonasObject[interestedIn]);
+// } else {
+//     console.log('Wrong answer! Choose between firstName, lastName, age, job, and friends');
+// }
 
 
 // Sekarang kita akan menambahkan elemen ke object
-jonasObject.location = 'Portugal';
-jonasObject['twitter'] = '@jonassschemtmann';
-console.log(jonasObject);
+// jonasObject.location = 'Portugal';
+// jonasObject['twitter'] = '@jonassschemtmann';
+// console.log(jonasObject);
 
 
 // Challenge : kita harus menampilkan output berikut
 //  "Jonas" has 3 friends, and his best friend is called "Michael"
-console.log(`${jonasObject.firstname} has ${jonasObject.friends.length} friends, and his best friend is called ${jonasObject.friends[0]}`);
+// console.log(`${jonasObject.firstname} has ${jonasObject.friends.length} friends, and his best friend is called ${jonasObject.friends[0]}`);
+
+// Object Methods
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schemedtmann',
+    birthYeah: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriverLicense: true,
+
+    // Object Method menggunakan fuction expression
+    // calcAge: function (birthYeah) {
+    //     return 2037 - birthYeah
+    // },
+
+    // Menggunakan this karena agar code tetap DRY
+    // calcAge: function () {
+    //     // Console.log(this)
+    //     return 2037 - this.birthYeah
+        
+    // },
+
+    // this ini berfungsi untuk menggantikan object dari jonas, jadi this.age sama saja dengan jonas,age
+    calcAge: function () {
+        this.age = 2037 - this.birthYeah;
+        return this.age
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}- year old tacher, and he has ${this.hasDriverLicense} driver's license`
+    }
+
+}
+
+// Challenge
+//  harus print seperti berikut ini "Jonas is a 46-year old teacher, and he has a driver's license"
+console.log(jonas.getSummary()); // Untuk memanggil method lalu maka harus menggunakan () beda dengan variabel dengan yang digunakan tanpa () seperti di bawah
+
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+
+
+
+
+
+
+// CODING CHALLENGE #3
+/*
+let's go back to Mark and John comparing their BMIs! This time, lets  use objects to implement the calculations! Remember: BMI = mass /height ** 2 = mass / (height*height). (Mass in kg and height in meter)
+
+1. FOr each of the, create anobject with properties for their full name, mass, and height (Mark higherand John Smith)
+2. Create a 'calcBMI' method an each object to calculate the BMI (the same method on both objects). Store the BMI Value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+TEST DATA: Marks weight 78 kg and is 1.69 m tall. John weight 92 kg and is 1.95 m tall.
+
+ */
+
+// Solutions:
+
