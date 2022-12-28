@@ -418,35 +418,35 @@ TEST DATA: Marks weight 78 kg and is 1.69 m tall. John weight 92 kg and is 1.95 
 
 // Solutions:
 
-const bmiMark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
-}
+// const bmiMark = {
+//     fullName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// }
 
-const bmiJohn = {
-    fullName: 'John Smith',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function (){
-        this.bmi = this.mass / this.height ** 2;
-        return this.bmi;
-    }
-}
+// const bmiJohn = {
+//     fullName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function (){
+//         this.bmi = this.mass / this.height ** 2;
+//         return this.bmi;
+//     }
+// }
 
-bmiMark.calcBMI();
-bmiJohn.calcBMI();
-console.log(bmiJohn.bmi, bmiMark.bmi);
+// bmiMark.calcBMI();
+// bmiJohn.calcBMI();
+// console.log(bmiJohn.bmi, bmiMark.bmi);
 
-if (bmiMark.bmi > bmiJohn.bmi) {
-    console.log(`${bmiMark.fullName}'s BMI (${bmiMark.bmi}) is higher than ${bmiJohn.fullName}'s (${bmiJohn.bmi})!`);
-} else if (bmiMark.bmi < bmiJohn.bmi) {
-    console.log(`${bmiJohn.fullName}'s BMI (${bmiJohn.bmi}) is higher than ${bmiMark.fullName}'s (${bmiMark.bmi})!`);
-} 
+// if (bmiMark.bmi > bmiJohn.bmi) {
+//     console.log(`${bmiMark.fullName}'s BMI (${bmiMark.bmi}) is higher than ${bmiJohn.fullName}'s (${bmiJohn.bmi})!`);
+// } else if (bmiMark.bmi < bmiJohn.bmi) {
+//     console.log(`${bmiJohn.fullName}'s BMI (${bmiJohn.bmi}) is higher than ${bmiMark.fullName}'s (${bmiMark.bmi})!`);
+// } 
 
 
 // Iteration: The for Loop
@@ -459,7 +459,7 @@ if (bmiMark.bmi > bmiJohn.bmi) {
 
 
 // Looping Arrays, Breaking and Continuing
-const jonasArray = [
+const jonas = [
     'Jonas',
     'Schemedtmann',
     2037 - 1991,
@@ -467,6 +467,7 @@ const jonasArray = [
     ['Michael', 'Peter', 'Steven'],
     true
 ];
+const types = [];
 
 // console.log(jonas[0]);
 // console.log(jonas[1]);
@@ -475,5 +476,39 @@ const jonasArray = [
 
 for (let i = 0; i < jonas.length; i++){
     // READING FROM JONAS ARRAY
-    
+    console.log(jonas[i], typeof jonas[i]);
+
+    // FILLING TYPES ARRAY PASTIKAN DITULIS DI BAWAH READING ARRAY
+    // types[i] = typeof jonas[i];
+    // CARA YANG DI BAWAH LEBIH BERSIH:
+    types.push(typeof jonas[i]);
+
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++){
+    ages.push(2037 - years[i]);
+} 
+
+console.log(ages);
+
+// CONTINUE AND BREAK
+console.log('---ONLY STRINGS---');
+for (let i = 0; i < jonas.length; i++){
+    if (typeof jonas[i] !== 'string')
+        continue;
+    console.log(jonas[i], typeof jonas[i]);
+
+}
+
+console.log('---BREAK WITH NUMBERS---');
+for (let i = 0; i < jonas.length; i++){
+    if (typeof jonas[i] === 'number')
+        break;
+    console.log(jonas[i], typeof jonas[i]);
+
 }
