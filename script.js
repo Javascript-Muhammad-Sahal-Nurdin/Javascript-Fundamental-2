@@ -459,6 +459,61 @@ TEST DATA: Marks weight 78 kg and is 1.69 m tall. John weight 92 kg and is 1.95 
 
 
 // Looping Arrays, Breaking and Continuing
+// const jonas = [
+//     'Jonas',
+//     'Schemedtmann',
+//     2037 - 1991,
+//     'teacher',
+//     ['Michael', 'Peter', 'Steven'],
+//     true
+// ];
+// const types = [];
+
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// ...
+// console.log(jonas[4]);
+
+// for (let i = 0; i < jonas.length; i++){
+    // READING FROM JONAS ARRAY
+    // console.log(jonas[i], typeof jonas[i]);
+
+    // FILLING TYPES ARRAY PASTIKAN DITULIS DI BAWAH READING ARRAY
+    // types[i] = typeof jonas[i];
+    // CARA YANG DI BAWAH LEBIH BERSIH:
+    // types.push(typeof jonas[i]);
+
+// }
+
+// console.log(types);
+
+// const years = [1991, 2007, 1969, 2020];
+// const ages = [];
+
+// for (let i = 0; i < years.length; i++){
+//     ages.push(2037 - years[i]);
+// } 
+
+// console.log(ages);
+
+// CONTINUE AND BREAK
+// console.log('---ONLY STRINGS---');
+// for (let i = 0; i < jonas.length; i++){
+//     if (typeof jonas[i] !== 'string')
+//         continue;
+//     console.log(jonas[i], typeof jonas[i]);
+
+// }
+
+// console.log('---BREAK WITH NUMBERS---');
+// for (let i = 0; i < jonas.length; i++){
+//     if (typeof jonas[i] === 'number')
+//         break;
+//     console.log(jonas[i], typeof jonas[i]);
+
+// }
+
+// Looping Backwards and Loops in Loops
 const jonas = [
     'Jonas',
     'Schemedtmann',
@@ -467,48 +522,45 @@ const jonas = [
     ['Michael', 'Peter', 'Steven'],
     true
 ];
-const types = [];
 
-// console.log(jonas[0]);
-// console.log(jonas[1]);
-// ...
-// console.log(jonas[4]);
+// 0, 1, ..., 5
+// 4, 4, ..., 0
 
-for (let i = 0; i < jonas.length; i++){
-    // READING FROM JONAS ARRAY
-    console.log(jonas[i], typeof jonas[i]);
-
-    // FILLING TYPES ARRAY PASTIKAN DITULIS DI BAWAH READING ARRAY
-    // types[i] = typeof jonas[i];
-    // CARA YANG DI BAWAH LEBIH BERSIH:
-    types.push(typeof jonas[i]);
-
+for (let i = jonas.length - 1; i >= 0; i--){
+    console.log(i, jonas[i]);
 }
 
-console.log(types);
-
-const years = [1991, 2007, 1969, 2020];
-const ages = [];
-
-for (let i = 0; i < years.length; i++){
-    ages.push(2037 - years[i]);
-} 
-
-console.log(ages);
-
-// CONTINUE AND BREAK
-console.log('---ONLY STRINGS---');
-for (let i = 0; i < jonas.length; i++){
-    if (typeof jonas[i] !== 'string')
-        continue;
-    console.log(jonas[i], typeof jonas[i]);
-
+for (let exercise = 1; exercise < 4; exercise++){
+    console.log(`-------- Strating exercise ${exercise}`);
+    for (let rep= 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♂️`);
+    }
 }
 
-console.log('---BREAK WITH NUMBERS---');
-for (let i = 0; i < jonas.length; i++){
-    if (typeof jonas[i] === 'number')
-        break;
-    console.log(jonas[i], typeof jonas[i]);
+// The while Loop
 
+// for (let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weight repetition ${rep} 🏋️‍♂️`);
+// }
+
+// THE WHILE LOOP LEBIH FLEXIBLE KARENA KITA HANYA PERLU MEMERHATIKAN KONDISI SELAMA KONDISI TERSEBUT ADALAH BENAR MAKA LOOP PERLU DIJALANKAN (TIDAK TERGANTUNG VARIABEL COUNTER APAPUN)
+// JADI KITA TIDAK TAHU BERAPA PERULANGAN AKAN DILAKUKAN MAKA KITA GUNAKAN WHILE
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Lifting weight repetition ${rep} 🏋️‍♂️`);
+    rep++;
 }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6)console.log('Loop is about to end ..');
+}
+
+// Coding Challenge #4
+/*
+Let's improve Steven's top calculator even more, this time using loops!
+
+1. Crea
+*/
