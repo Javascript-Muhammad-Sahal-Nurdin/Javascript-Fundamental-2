@@ -359,45 +359,45 @@ const jonasArray = [
 
 // Object Methods
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schemedtmann',
-    birthYeah: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriverLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schemedtmann',
+//     birthYeah: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriverLicense: true,
 
-    // Object Method menggunakan fuction expression
-    // calcAge: function (birthYeah) {
-    //     return 2037 - birthYeah
-    // },
+//      Object Method menggunakan fuction expression
+//      calcAge: function (birthYeah) {
+//          return 2037 - birthYeah
+//      },
 
-    // Menggunakan this karena agar code tetap DRY
-    // calcAge: function () {
-    //     // Console.log(this)
-    //     return 2037 - this.birthYeah
+//      Menggunakan this karena agar code tetap DRY
+//      calcAge: function () {
+//          Console.log(this)
+//     /    return 2037 - this.birthYeah
         
-    // },
+//      },
 
-    // this ini berfungsi untuk menggantikan object dari jonas, jadi this.age sama saja dengan jonas,age
-    calcAge: function () {
-        this.age = 2037 - this.birthYeah;
-        return this.age
-    },
+//      this ini berfungsi untuk menggantikan object dari jonas, jadi this.age sama saja dengan jonas,age
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYeah;
+//         return this.age
+//     },
 
-    getSummary: function () {
-        return `${this.firstName} is a ${this.calcAge()}- year old tacher, and he has ${this.hasDriverLicense} driver's license`
-    }
+//     getSummary: function () {
+//         return `${this.firstName} is a ${this.calcAge()}- year old tacher, and he has ${this.hasDriverLicense} driver's license`
+//     }
 
-}
+// }
 
-// Challenge
+//  Challenge
 //  harus print seperti berikut ini "Jonas is a 46-year old teacher, and he has a driver's license"
-console.log(jonas.getSummary()); // Untuk memanggil method lalu maka harus menggunakan () beda dengan variabel dengan yang digunakan tanpa () seperti di bawah
+// console.log(jonas.getSummary()); // Untuk memanggil method lalu maka harus menggunakan () beda dengan variabel dengan yang digunakan tanpa () seperti di bawah
 
-console.log(jonas.age);
-console.log(jonas.age);
-console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
 
 
 
@@ -408,7 +408,7 @@ console.log(jonas.age);
 /*
 let's go back to Mark and John comparing their BMIs! This time, lets  use objects to implement the calculations! Remember: BMI = mass /height ** 2 = mass / (height*height). (Mass in kg and height in meter)
 
-1. FOr each of the, create anobject with properties for their full name, mass, and height (Mark higherand John Smith)
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
 2. Create a 'calcBMI' method an each object to calculate the BMI (the same method on both objects). Store the BMI Value to a property, and also return it from the method.
 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
 
@@ -418,3 +418,62 @@ TEST DATA: Marks weight 78 kg and is 1.69 m tall. John weight 92 kg and is 1.95 
 
 // Solutions:
 
+const bmiMark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const bmiJohn = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function (){
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+bmiMark.calcBMI();
+bmiJohn.calcBMI();
+console.log(bmiJohn.bmi, bmiMark.bmi);
+
+if (bmiMark.bmi > bmiJohn.bmi) {
+    console.log(`${bmiMark.fullName}'s BMI (${bmiMark.bmi}) is higher than ${bmiJohn.fullName}'s (${bmiJohn.bmi})!`);
+} else if (bmiMark.bmi < bmiJohn.bmi) {
+    console.log(`${bmiJohn.fullName}'s BMI (${bmiJohn.bmi}) is higher than ${bmiMark.fullName}'s (${bmiMark.bmi})!`);
+} 
+
+
+// Iteration: The for Loop
+// FOR LOOP MENGGUNAKAN DEKLARASI LET
+// FOR LOOP KEEP RUNNNING WHILE CONDITION IS TRUE
+
+// for (let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weight repetition ${rep} 🏋️‍♂️`);
+// }
+
+
+// Looping Arrays, Breaking and Continuing
+const jonasArray = [
+    'Jonas',
+    'Schemedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// ...
+// console.log(jonas[4]);
+
+for (let i = 0; i < jonas.length; i++){
+    // READING FROM JONAS ARRAY
+    
+}
