@@ -50,29 +50,29 @@
 // capital city is Helsinki'
 // 2. Call this function 3 times, with input data for 3 different countries. Store the
 // returned values in 3 different variables, and log them to the console
-function describeCountry(country, population, capitalCity) {
-  const describe = `${country} has ${population} million people and its capital city is ${capitalCity}`;
-  return describe;
-}
+// function describeCountry(country, population, capitalCity) {
+//   const describe = `${country} has ${population} million people and its capital city is ${capitalCity}`;
+//   return describe;
+// }
 
-const country1 = describeCountry(
-  prompt("Masukkan nama country: "),
-  prompt("Masukkan banyak population: "),
-  prompt("Masukkan nama capital city: ")
-);
-const country2 = describeCountry(
-  prompt("Masukkan nama country: "),
-  prompt("Masukkan banyak population: "),
-  prompt("Masukkan nama capital city: ")
-);
-const country3 = describeCountry(
-  prompt("Masukkan nama country: "),
-  prompt("Masukkan banyak population: "),
-  prompt("Masukkan nama capital city: ")
-);
-console.log(country1);
-console.log(country2);
-console.log(country3);
+// const country1 = describeCountry(
+//   prompt("Masukkan nama country: "),
+//   prompt("Masukkan banyak population: "),
+//   prompt("Masukkan nama capital city: ")
+// );
+// const country2 = describeCountry(
+//   prompt("Masukkan nama country: "),
+//   prompt("Masukkan banyak population: "),
+//   prompt("Masukkan nama capital city: ")
+// );
+// const country3 = describeCountry(
+//   prompt("Masukkan nama country: "),
+//   prompt("Masukkan banyak population: "),
+//   prompt("Masukkan nama capital city: ")
+// );
+// console.log(country1);
+// console.log(country2);
+// console.log(country3);
 
 /////////////////////////////////////////////////////////////////////
 
@@ -102,6 +102,47 @@ console.log(country3);
 //     return 2037 - birthYear;
 // }
 // Namun tidak bisa dengan Functions Expression. Jadi untuk penggunaannya kita lebih ke fuction expressions. sama saja lebih ke preferensi masing-masing
+/////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////
+// LECTURE: Function Declarations vs. Expressions
+// 1. The world population is 7900 million people. Create a function declaration
+// called 'percentageOfWorld1' which receives a 'population' value, and
+// returns the percentage of the world population that the given population
+// represents. For example, China has 1441 million people, so it's about 18.2% of
+// the world population
+// 2. To calculate the percentage, divide the given 'population' value by 7900
+// and then multiply by 100
+// 3. Call 'percentageOfWorld1' for 3 populations of countries of your choice,
+// store the results into variables, and log them to the console
+// 4. Create a function expression which does the exact same thing, called
+// 'percentageOfWorld2', and also call it with 3 country populations (can be
+// the same populations)
+// function percentageOfWorld1(country, population) {
+//   const calculatedPercentage = (population / 7900) * 100;
+//   return `${country} has ${population} million people, so it's about ${calculatedPercentage}% of the world population`;
+// }
+// const country1 = percentageOfWorld1(
+//   prompt("Masukkan nama country: "),
+//   Number(prompt("Masukkan banyak population: "))
+// );
+// const country2 = percentageOfWorld1(
+//   prompt("Masukkan nama country: "),
+//   Number(prompt("Masukkan banyak population: "))
+// );
+// const country3 = percentageOfWorld1(
+//   prompt("Masukkan nama country: "),
+//   Number(prompt("Masukkan banyak population: "))
+// );
+// console.log(country1);
+// console.log(country2);
+// console.log(country3);
+
+// const percentageOfWorld2 = function (country, population) {
+//   const calculatedPercentage = (population / 7900) * 100;
+//   return `${country} has ${population} million people, so it's about ${calculatedPercentage}% of the world population`;
+// };
+
 /////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////
@@ -135,6 +176,17 @@ console.log(country3);
 // console.log(yearUntilRetirement2(2003, "Sahal"));
 
 // Kekurangan menggunakan arrow function ini adalah tidak bisa menggunakan 'this' keyword
+/////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////
+// LECTURE: Arrow Functions
+// 1. Recreate the last assignment, but this time create an arrow function called
+// 'percentageOfWorld3'
+const percentageOfWorld3 = (country, population) => {
+  const calculatedPercentage = (population / 7900) * 100;
+  return `${country} has ${population} million people, so it's about ${calculatedPercentage}% of the world population`;
+};
+
 /////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////
