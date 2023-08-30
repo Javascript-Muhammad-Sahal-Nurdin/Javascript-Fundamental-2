@@ -182,9 +182,9 @@
 // LECTURE: Arrow Functions
 // 1. Recreate the last assignment, but this time create an arrow function called
 // 'percentageOfWorld3'
-const percentageOfWorld3 = (country, population) => {
+const percentageOfWorld3 = (population) => {
   const calculatedPercentage = (population / 7900) * 100;
-  return `${country} has ${population} million people, so it's about ${calculatedPercentage}% of the world population`;
+  return calculatedPercentage;
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -219,6 +219,28 @@ const percentageOfWorld3 = (country, population) => {
 /////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////
+// LECTURE: Functions Calling Other Functions
+// 1. Create a function called 'describePopulation'. Use the function type you
+// like the most. This function takes in two arguments: 'country' and
+// 'population', and returns a string like this: 'China has 1441 million people,
+// which is about 18.2% of the world.'
+// 2. To calculate the percentage, 'describePopulation' call the
+// 'percentageOfWorld1' you created earlier
+// 3. Call 'describePopulation' with data for 3 countries of your choice
+
+function describePopulation(country, population) {
+  const percentage = percentageOfWorld3(population);
+  const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
+  return description;
+}
+
+const Indonesia = describePopulation("Indonesia", 280);
+const China = describePopulation("China", 1441);
+const Singapore = describePopulation("Singapore", 5);
+console.log(Indonesia, China, Singapore);
+/////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////
 // Reviewing Functions
 
 // const calcAge = function age(birthYear) {
@@ -245,7 +267,7 @@ const percentageOfWorld3 = (country, population) => {
 /////////////////////////////////////////////////////////////////////
 // Coding Challenge #1
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+// const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 // Test 1
 // let scoreDolphins = calcAverage(44, 23, 71);
 // let scoreKoalas = calcAverage(65, 54, 49);
@@ -328,6 +350,19 @@ const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 //   calcAge(years[years.length - 1]),
 // ];
 // console.log(ages);
+/////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////
+// LECTURE: Introduction to Arrays
+// 1. Create an array containing 4 population values of 4 countries of your choice.
+// You may use the values you have been using previously. Store this array into a
+// variable called 'populations'
+// 2. Log to the console whether the array has 4 elements or not (true or false)
+// 3. Create an array called 'percentages' containing the percentages of the
+// world population for these 4 population values. Use the function
+// 'percentageOfWorld1' that you created earlier to compute the 4
+// percentage values
+
 /////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////
